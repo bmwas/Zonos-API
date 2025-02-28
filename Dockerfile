@@ -11,6 +11,8 @@ RUN apt update && \
 WORKDIR /app
 COPY . ./
 
+EXPOSE 4100
+
 RUN uv pip install --system -e . && \
     uv pip install --system -e .[compile] && \
     uv pip install --system pydub soundfile
